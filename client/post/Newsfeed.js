@@ -8,6 +8,7 @@ import auth from './../auth/auth-helper'
 import PostList from './PostList'
 import {listNewsFeed} from './api-post.js'
 import NewPost from './NewPost'
+import NewArticle from './NewArticle'
 
 const styles = theme => ({
   card: {
@@ -61,10 +62,10 @@ class Newsfeed extends Component {
     return (
       <Card className={classes.card}>
         <Typography type="title" className={classes.title}>
-          Newsfeed
+          New Submission
         </Typography>
         <Divider/>
-        <NewPost addUpdate={this.addPost}/>
+        <NewArticle addUpdate={this.addPost}/>
         <Divider/>
         <PostList removeUpdate={this.removePost} posts={this.state.posts}/>
       </Card>
