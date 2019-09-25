@@ -1,5 +1,5 @@
 # Group-Six
 # Yongmi Lee 
-# Luxin Zhan
+# Luxin Zhang
 # Soli
 # Carlos
