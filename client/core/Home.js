@@ -55,12 +55,12 @@ class Home extends Component {
             <Grid item xs={12}>
               <Card className={classes.card}>
                 <Typography type="headline" component="h2" className={classes.title}>
-                  Home Page
+                  SERLER
                 </Typography>
                 <CardMedia className={classes.media} image={seashellImg} title="Unicorn Shells"/>
                 <CardContent>
                   <Typography type="body1" component="p">
-                    Welcome to the MERN Social home page. 
+                    Welcome to the SERLER home page. 
                   </Typography>
                 </CardContent>
               </Card>
