@@ -33,9 +33,9 @@ class ProfileTabs extends Component {
             textColor="primary"
             fullWidth
           >
-            <Tab label="Posts" />
-            <Tab label="Following" />
-            <Tab label="Followers" />
+            <Tab label="Articles" />
+            <Tab label="Status" />
+            {/* <Tab label="Followers" /> */}
           </Tabs>
         </AppBar>
        {this.state.tab === 0 && <TabContainer><PostList removeUpdate={this.props.removePostUpdate} posts={this.props.posts}/></TabContainer>}
