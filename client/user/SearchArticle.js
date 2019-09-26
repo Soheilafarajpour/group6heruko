@@ -29,97 +29,97 @@ class SearchArticle extends Component {
           <Typography type="title" className={classes.title}>
             Search Article
           </Typography>
-        <h>Description</h>
-          <input
-            type='text'
-            name='descArticle'
-            onChange={this.myChangeHandler}
-          />
-        <h>Enter Date from</h>
-          <input
-            type='date'
-            name='dateFrom'
-            onChange={this.myChangeHandler}
-          />
+          <h>Description</h>
+            <input
+              type='text'
+              name='descArticle'
+              onChange={this.myChangeHandler}
+            />
+          <h>Enter Date from</h>
+            <input
+              type='date'
+              name='dateFrom'
+              onChange={this.myChangeHandler}
+            />
           <h>to </h>
           <input
             type='date'
             name='dateTo'
             onChange={this.myChangeHandler}
           />
-        <p> </p>
-        <h>If </h>
-        <select size="1" name="bibTxtSearchItem">
-          <option value="article">
-            article
-          </option>
-          <option value="auter">
-            auter
-          </option>
-          <option value="title">
-            title
-          </option>
-          <option value="journal">
-            journal
-          </option>
-          <option value="year">
-            year
-          </option>
-          <option value="volume">
-            volume
-          </option>
-          <option value="number">
-            number
-          </option>
-          <option value="pages">
-            pages
-          </option>
-          <option value="month">
-            month
-          </option>
-        </select>
-         operator<select size="1" name="oprateFilde">
-         <option value="if1">
-            contains
-          </option>
-          <option value="if2">
-            dose not contains
-          </option>
-          <option value="if3">
-            begins with
-          </option>
-          <option value="if4">
-            end with
-          </option>
-          <option value="if5">
-            is equat to
-          </option>
-          <option value="if6">
-            is less than
-          </option>
-          <option value="if7">
-            is less than or equal
-          </option>
-          <option value="if8">
-            more than or equal
-          </option>
-        </select>
-        <h>value </h>
-          <input
-            type='text'
-            name='valueArticle'
-            onChange={this.myChangeHandler}
-          />
-          <button type="button">
-            Add
-          </button>
-          <button type="button">
-            Delete
-          </button>
-          <p />
-          <button
-            onClick={this.search.bind(this, "Goal")}
-          > coming soon </button>
+          <p> </p>
+          <h>If </h>
+          <select size="1" name="bibTxtSearchItem">
+            <option value="article">
+              article
+            </option>
+            <option value="auter">
+              auter
+            </option>
+            <option value="title">
+              title
+            </option>
+            <option value="journal">
+              journal
+            </option>
+            <option value="year">
+              year
+            </option>
+            <option value="volume">
+              volume
+            </option>
+            <option value="number">
+              number
+            </option>
+            <option value="pages">
+              pages
+            </option>
+            <option value="month">
+              month
+            </option>
+          </select>
+          operator<select size="1" name="oprateFilde">
+          <option value="if1">
+              contains
+            </option>
+            <option value="if2">
+              dose not contains
+            </option>
+            <option value="if3">
+              begins with
+            </option>
+            <option value="if4">
+              end with
+            </option>
+            <option value="if5">
+              is equat to
+            </option>
+            <option value="if6">
+              is less than
+            </option>
+            <option value="if7">
+              is less than or equal
+            </option>
+            <option value="if8">
+              more than or equal
+            </option>
+          </select>
+          <h>value </h>
+            <input
+              type='text'
+              name='valueArticle'
+              onChange={this.myChangeHandler}
+            />
+            <button type="button">
+              Add
+            </button>
+            <button type="button">
+              Delete
+            </button>
+            <p />
+            <button
+              onClick={this.search.bind(this, "Goal")}
+            > Serach </button>
           </Paper>
       </form>
     ) 
