@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {withStyles} from 'material-ui/styles'
 import Card, {CardContent, CardMedia} from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
-import seashellImg from './../assets/images/seashell.jpg'
+import serlerImg from './../assets/images/logoSERLER.png'
 import {Link} from 'react-router-dom'
 import Grid from 'material-ui/Grid'
 import auth from './../auth/auth-helper'
@@ -55,13 +55,10 @@ class Home extends Component {
             <Grid item xs={12}>
               <Card className={classes.card}>
                 <Typography type="headline" component="h2" className={classes.title}>
-                  Home Page
+                  WELCOME!
                 </Typography>
-                <CardMedia className={classes.media} image={seashellImg} title="Unicorn Shells"/>
+                <CardMedia className={classes.media} image={serlerImg} title="SERLER LOGO"/>
                 <CardContent>
-                  <Typography type="body1" component="p">
-                    Welcome to the MERN Social home page. 
-                  </Typography>
                 </CardContent>
               </Card>
             </Grid>

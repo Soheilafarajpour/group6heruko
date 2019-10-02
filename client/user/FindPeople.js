@@ -79,7 +79,7 @@ class FindPeople extends Component {
     return (<div>
       <Paper className={classes.root} elevation={4}>
         <Typography type="title" className={classes.title}>
-          Who to follow
+          Another Authors
         </Typography>
         <List>
           {this.state.users.map((item, i) => {
@@ -95,9 +95,9 @@ class FindPeople extends Component {
                         <ViewIcon/>
                       </IconButton>
                     </Link>
-                    <Button aria-label="Follow" variant="raised" color="primary" onClick={this.clickFollow.bind(this, item, i)}>
+                    {/* <Button aria-label="Follow" variant="raised" color="primary" onClick={this.clickFollow.bind(this, item, i)}>
                       Follow
-                    </Button>
+                    </Button> */}
                   </ListItemSecondaryAction>
                 </ListItem>
               </span>
