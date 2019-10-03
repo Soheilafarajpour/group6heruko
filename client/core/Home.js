@@ -18,7 +18,7 @@ const styles = theme => ({
     margin: 10,
   },
   card: {
-    maxWidth: 'auto',
+    maxWidth: '200',
     margin: 'auto',
     marginTop: 'auto'
   },
@@ -27,7 +27,7 @@ const styles = theme => ({
     color: theme.palette.text.secondary
   },
   media: {
-    minHeight: 370
+    minHeight: 450,
   }
 })
 
@@ -56,8 +56,8 @@ class Home extends Component {
     return (
       <div className={classes.root}>
         {this.state.defaultPage &&
-          <Grid container spacing={0}>
-            <Grid item xs sm>
+          <Grid container spacing={24}>
+            <Grid item xs >
               <Card className={classes.card}>
                <Typography align='center' type="headline" className={classes.title}>
                   WELCOME!
@@ -65,7 +65,7 @@ class Home extends Component {
                 <CardMedia className={classes.media} image={serlerImg} title="SERLER LOGO"/>
               </Card>
             </Grid>
-            <Grid item xs={12} sm={5}>
+            <Grid item xs={10}>
               <FindArticle/>
             </Grid>
           </Grid>
