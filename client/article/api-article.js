@@ -13,6 +13,14 @@ const create = (params, credentials, article) => {
     })
   }
   
+  const list = () => {
+    return fetch('/api/articles/', {
+      method: 'GET',
+    }).then(response => {
+      return response.json()
+    }).catch((err) => console.log(err))
+  }
+
   const listByUser = (params, credentials) => {
     return fetch('/api/articles/by/'+ params.userId, {
       method: 'GET',
@@ -119,6 +127,7 @@ const create = (params, credentials, article) => {
   }
   
   export {
+    list,
     listFeed,
     listByUser,
     create,

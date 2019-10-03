@@ -5,6 +5,10 @@ import artiCtrl from '../controllers/article.controller'
 
 const router = express.Router()
 
+router.route('/api/articles')
+  .get(artiCtrl.list)
+  .post(artiCtrl.create)
+
 router.route('/api/articles/new/:userId')
   .post(authCtrl.requireSignin, artiCtrl.create)
 

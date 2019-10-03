@@ -10,6 +10,7 @@ import auth from './../auth/auth-helper'
 import FindPeople from './../user/FindPeople'
 import ArticleList from './../article/ArticleList'
 import Newsfeed from './../post/Newsfeed'
+import FindArticle from './../article/FindArticle'
 
 const styles = theme => ({
   root: {
@@ -64,6 +65,7 @@ class Home extends Component {
                 <CardContent>
                 </CardContent>
               </Card>
+              <FindArticle/>
             </Grid>
           </Grid>
         }
