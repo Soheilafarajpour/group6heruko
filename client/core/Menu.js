@@ -36,7 +36,7 @@ const Menu = withRouter(({history}) => (
             </Button>
           </Link>
 		  <Link to="/searchArticle">
-            <Button style={isActive(history, "/searchArticle")}>Search Articles
+            <Button style={isActive(history, "/searchArticle")}>Advanced Search
             </Button>
           </Link>
         </span>)
