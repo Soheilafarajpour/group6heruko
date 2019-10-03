@@ -49,7 +49,7 @@ const list = (req, res) => {
       })
     }
     res.json(users)
-  }).select('postedBy author title annotation date created comments')
+  }).select('postedBy author title annotation date created comments journal volume number pages')
 }
 
 const listByUser = (req, res) => {
