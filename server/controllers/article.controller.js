@@ -41,6 +41,17 @@ const articleByID = (req, res, next, id) => { //it was postByID
   })
 }
 
+const list = (req, res) => {
+  Article.find((err, users) => {
+    if (err) {
+      return res.status(400).json({
+        error: errorHandler.getErrorMessage(err)
+      })
+    }
+    res.json(users)
+  }).select('postedBy author title annotation date created comments')
+}
+
 const listByUser = (req, res) => {
   Article.find({postedBy: req.profile._id})
   .populate('comments', 'text created')
@@ -158,6 +169,7 @@ const isPoster = (req, res, next) => {
 }
 
 export default {
+  list,
   listByUser,
   listFeed,
   create,
