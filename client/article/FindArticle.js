@@ -7,9 +7,10 @@ import Avatar from 'material-ui/Avatar'
 import IconButton from 'material-ui/IconButton'
 import Typography from 'material-ui/Typography'
 import ArrowForward from 'material-ui-icons/ArrowForward'
-import Person from 'material-ui-icons/Description'
+import Description from 'material-ui-icons/Description'
+import MaterialTable from 'material-table'
 import {Link} from 'react-router-dom'
-import {list} from './api-article.js'
+import {list} from './api-article.js'   
 
 const styles = theme => ({
   root: theme.mixins.gutters({
@@ -17,7 +18,7 @@ const styles = theme => ({
     margin: theme.spacing.unit * 5
   }),
   title: {
-    margin: `${theme.spacing.unit * 4}px 0 ${theme.spacing.unit * 2}px`,
+    margin: `${theme.spacing.unit * 1}px 0 ${theme.spacing.unit * 2}px`,
     color: theme.palette.openTitle
   }
 })
@@ -40,33 +41,24 @@ class FindArticle extends Component {
   render() {
     const {classes} = this.props
     return (
-      <Paper className={classes.root} elevation={4}>
-        <Typography type="title" className={classes.title}>
-          All Articles
-        </Typography>
-        <List dense>
-         {this.state.articles.map((item, i) => {
-          return <Link to={"/articles/" + item._id} key={i}>
-                    <ListItem button>
-                      <ListItemAvatar>
-                        <Avatar>
-                          <Person/>
-                        </Avatar>
-                      </ListItemAvatar>
-                      <ListItemText primary={item.title}/>
-                      <ListItemText primary={item.author}/>
-                      <ListItemText primary={item.date}/>
-                      <ListItemSecondaryAction>
-                      <IconButton>
-                          <ArrowForward/>
-                      </IconButton>
-                      </ListItemSecondaryAction>
-                    </ListItem>
-                 </Link>
-               })
-             }
-        </List>
-      </Paper>
+
+        <MaterialTable
+        title="All Articles"
+        columns={[
+            { title: "AUTHOR", field: "author" },
+            { title: "TITLE", field: "title" },
+            { title: "DATE", field: "date", type: "date" },
+        ]}
+        data={this.state.articles.map((item, i) => item )}        
+        actions={[
+          {
+            icon: 'description',
+            tooltip: 'View Details',
+            onClick: (event, rowData) => alert("Coming Soon :P ")
+          }
+        ]}
+      />
+
     )
   }
 }
