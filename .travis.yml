@@ -6,6 +6,8 @@ install:
 - npm install
 script:
 - npm run build
+services:
+ mongodb
 
 deploy:
   provider: pages
